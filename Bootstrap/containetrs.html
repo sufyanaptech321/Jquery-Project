@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Containers</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Fixed-width container -->
+    <div class="container">
+      <h2>Fixed Width Container</h2>
+      <p>This container has a maximum width depending on screen size.</p>
+    </div>
+
+    <!-- Full-width container (always 100%) -->
+<div class="container-fluid bg-light">
+  <h2>Fluid Container</h2>
+  <p>This container is always 100% width on all screen sizes.</p>
+</div>
+
+
+<!-- Responsive container (becomes fixed-width only at >= md screens) -->
+<div class="container-md bg-secondary text-white">
+  <h2>Responsive Container (container-md)</h2>
+  <p>
+    Full-width on extra-small & small screens,
+    fixed-width only on medium (≥768px) and larger screens.
+  </p>
+</div>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  </body>
+</html>
