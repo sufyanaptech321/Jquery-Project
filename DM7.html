@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery addClass(), removeClass(), toggleClass()</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+ 
+        #box {
+            width: 200px;
+            height: 200px;
+            background: lightgray;
+            border: 2px solid #555;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .active {
+            background-color: #4CAF50 !important; 
+            color: white;
+            width: 200px;
+            height: 200px;
+      ;
+            border: 2px solid #555;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>jQuery Class Manipulation Example</h2>
+
+    <button id="btnAdd">Add Class</button>
+    <button id="btnRemove">Remove Class</button>
+    <button id="btnToggle">Toggle Class</button>
+
+    <div id="box" ></div>
+
+    <script>
+       
+        $("#btnAdd").click(function () {
+            $("#box").addClass("active");
+        });
+
+        $("#btnRemove").click(function () {
+            $("#box").removeClass("active");
+        });
+
+        $("#btnToggle").click(function () {
+            $("#box").toggleClass("active");
+        });
+    </script>
+
+</body>
+</html>

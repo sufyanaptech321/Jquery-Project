@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Image with jQuery</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        #myImage {
+            width: 250px;
+            height: auto;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>jQuery attr() Example - Change Image</h2>
+
+
+    <img id="myImage" src="" alt="Image">
+
+    <br>
+
+
+    <button id="changeBtn">Show Image</button>
+
+    <script>
+        $("#changeBtn").click(function () {
+            
+            $("#myImage").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4ve0iPOSMpcA35Y6hBnxly9jtLJ80HWmLTw&s");
+        });
+    </script>
+
+</body>
+</html>

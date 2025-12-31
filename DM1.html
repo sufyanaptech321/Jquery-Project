@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery HTML vs TEXT Example</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        #box {
+            width: 300px;
+            padding: 20px;
+            background: #f0f0f0;
+            border: 2px solid #ccc;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        button {
+            margin: 10px 10px 0 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>jQuery .html() vs .text() Example</h2>
+
+    <button id="btnHtml">Set HTML</button>
+    <button id="btnText">Set TEXT</button>
+
+    <div id="box">
+        Original Content
+    </div>
+
+    <script>
+        // Using .html()
+        $("#btnHtml").click(function () {
+            $("#box").html("<b style='color:red;'>This is NEW <u>HTML</u> content</b>");
+        });
+
+        // Using .text()
+        $("#btnText").click(function () {
+            $("#box").text("<b>This will appear as plain text, not HTML</b>");
+        });
+    </script>
+
+</body>
+</html>

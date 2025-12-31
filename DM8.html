@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Full Demo</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        #box, #panel { width: 200px; height: 100px; background: lightblue; margin: 10px; line-height: 100px; text-align: center; }
+       
+    </style>
+</head>
+<body>
+
+<div id="box">Box</div>
+<button id="singleCss">Single Property</button>
+<button id="multiCss">Multiple Properties</button>
+
+
+<script>
+$(document).ready(function(){
+
+   
+    $("#singleCss").click(function(){
+        $("#box").css("color","red");
+    });
+
+    $("#multiCss").click(function(){
+        $("#box").css({
+            color: "white",
+            background: "black",
+            padding: "20px"
+        });
+    });
+
+});
+</script>
+
+</body>
+</html>

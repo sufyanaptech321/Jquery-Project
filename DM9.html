@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Full Demo</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+ 
+    <style>
+        body { font-family: Arial; padding: 20px; }
+      #panel { width: 200px; height: 100px; background: lightblue; margin: 10px; line-height: 100px; text-align: center; }
+ 
+        button { margin: 5px; padding: 8px 15px; cursor: pointer; }
+     
+    </style>
+</head>
+<body>
+
+
+<h2>Effects & Animations</h2>
+<div id="panel">Panel</div>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="toggle">Toggle</button>
+<button id="fade">Fade Toggle</button>
+<button id="slide">Slide Toggle</button>
+<button id="animate">Animate</button>
+
+
+
+<script>
+$(document).ready(function(){
+
+
+    $("#hide").click(function(){ $("#panel").hide(); });
+    $("#show").click(function(){ $("#panel").show(); });
+    $("#toggle").click(function(){ $("#panel").toggle(); });
+    $("#fade").click(function(){ $("#panel").fadeToggle(); });
+    $("#slide").click(function(){ $("#panel").slideToggle(); });
+    $("#animate").click(function(){
+        $("#panel").animate({ left: "300px", opacity: 0.5, height: "200px" }, 2000);
+    });
+
+});
+</script>
+
+</body>
+</html>

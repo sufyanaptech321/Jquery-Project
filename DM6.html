@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Events Demo</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        #box {
+            width: 200px;
+            height: 120px;
+            background: lightblue;
+            border: 2px solid #333;
+            margin-bottom: 15px;
+            text-align: center;
+            line-height: 120px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+         #box2 {
+            width: 200px;
+            height: 120px;
+            background: lightblue;
+            border: 2px solid #333;
+            margin-bottom: 15px;
+            text-align: center;
+            line-height: 120px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>jQuery Events Demo</h2>
+
+<!-- Mouse Events Box -->
+<div id="box">Hover or Click Me</div>
+<div id="box2">Double Click</div>
+
+<!-- Textbox -->
+<input type="text" id="nameInput" placeholder="Type something...">
+
+<br><br>
+
+<br><br>
+
+<!-- Form -->
+<form id="loginForm">
+    <input type="text" id="phone" placeholder="Enter phone number">
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+
+    // CLICK EVENT
+    $("#box").click(function () {
+        alert("Box clicked!");
+    });
+
+    // DOUBLE CLICK EVENT
+    $("#box2").dblclick(function () {
+        alert("Double clicked!");
+    });
+
+    // KEYUP (text typed)
+    $("#nameInput").keyup(function () {
+        console.log("Key Up: " + $(this).val());
+    });
+
+    // KEYDOWN (key pressed)
+    $("#nameInput").keydown(function () {
+        console.log("Key Down...");
+    });
+
+
+    $("#box").mouseenter(function () {
+        $(this).css("background", "lightgreen").text("Mouse Enter");
+    });
+
+    // MOUSELEAVE
+    $("#box").mouseleave(function () {
+        $(this).css("background", "red").text("Hover or Click Me");
+    });
+
+
+
+    // FORM SUBMIT EVENT
+    $("#loginForm").submit(function () {
+        let phone = $("#phone").val();
+        alert("Form Submitted! Phone: " + phone);
+    });
+
+</script>
+
+</body>
+</html>

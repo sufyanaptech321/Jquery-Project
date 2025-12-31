@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery val() Example</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px 10px 0 0;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>jQuery .val() Get & Set Example</h2>
+
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <br><br>
+
+    <button id="btnGet">GET Value</button>
+    <button id="btnSet">SET Value</button>
+
+    <div id="output"></div>
+
+    <script>
+       
+        $("#btnGet").click(function () {
+            var userName = $("#name").val();  
+            $("#output").text("You entered: " + userName);
+        });
+
+    
+        $("#btnSet").click(function () {
+            $("#name").val("ALi");          
+            $("#output").text("Value set to: ALi");
+        });
+    </script>
+
+</body>
+</html>

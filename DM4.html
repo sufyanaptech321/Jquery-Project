@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Multiple Images with One Button</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        #myImage {
+            width: 250px;
+            height: auto;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <h2>jQuery - Same Button Change Multiple Images</h2>
+
+    <img id="myImage" src="https://via.placeholder.com/250" alt="Image">
+
+    <br>
+
+    <button id="changeBtn">Change Image</button>
+
+    <script>
+        // Array of images
+        var images = [
+            "https://picsum.photos/250/200?random=1",
+            "https://picsum.photos/250/200?random=2",
+            "https://picsum.photos/250/200?random=3",
+            "https://picsum.photos/250/200?random=4",
+            "https://picsum.photos/250/200?random=5"
+        ];
+
+        var i = 0; // start position
+
+        $("#changeBtn").click(function () {
+            // Change to next image
+            $("#myImage").attr("src", images[i]);
+
+            // Move to next index
+            i++;
+
+            // Restart if end of array
+            if (i >= images.length) {
+                i = 0;
+            }
+        });
+    </script>
+
+</body>
+</html>

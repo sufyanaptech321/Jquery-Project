@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery append, prepend, remove, empty</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+
+        #box {
+            width: 250px;
+            height: 100px;
+            background: lightblue;
+            padding: 10px;
+            margin-top: 15px;
+            border: 2px solid #333;
+        }
+
+        ul {
+            border: 1px solid #aaa;
+            padding: 10px;
+            width: 200px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>jQuery append(), prepend(), remove(), empty()</h2>
+
+    <h3>List Example</h3>
+    <ul id="list">
+        <li>Item A</li>
+        <li>Item B</li>
+    </ul>
+
+    <button id="btnAppend">Append (Add to End)</button>
+    <button id="btnPrepend">Prepend (Add to Start)</button>
+
+    <h3>Box Example</h3>
+    <div id="box">
+        This is a box with some content.
+    </div>
+
+    <button id="btnRemove">Remove Box</button>
+    <button id="btnEmpty">Empty Box</button>
+
+    <script>
+        // APPEND — Add item to END of list
+        $("#btnAppend").click(function () {
+            $("#list").append("<li>End item</li>");
+        });
+
+        // PREPEND — Add item to START of list
+        $("#btnPrepend").click(function () {
+            $("#list").prepend("<li>Start item</li>");
+        });
+
+        // REMOVE — Completely remove the element
+        $("#btnRemove").click(function () {
+            $("#box").remove();
+        });
+
+        // EMPTY — Remove inside content only
+        $("#btnEmpty").click(function () {
+            $("#box").empty();
+        });
+    </script>
+
+</body>
+</html>
